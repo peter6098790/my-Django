@@ -1,0 +1,30 @@
+<form action = "" method = "Post">
+    {% csrf_token %}
+    <input name= "city_name" placeholder="請輸入縣市名稱">
+    <input type= "submit" value="查詢">
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>上傳時間</th>
+            <th>縣市</th>
+            <th>測站</th>
+            <th>PM2.5濃度</th>
+            <th>AQI指數</th>
+            <th>空氣品質</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for log in results %}
+        <tr>
+            <td>{{ log.publishTime }}</td>
+            <td>{{ log.country }}</td>
+            <td>{{ log.siteName }}</td>
+            <td>{{ log.pm }}</td>
+            <td>{{ log.aqi }}</td>
+            <td>{{ log.airQuility }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

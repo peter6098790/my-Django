@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 新增的app
     'webClawer.apps.WebclawerConfig'
+    #'webClawer'
 ]
 
 MIDDLEWARE = [
