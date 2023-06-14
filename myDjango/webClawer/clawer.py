@@ -25,7 +25,7 @@ class EPA(Website):
         for log in data_json['records']:
             country = log['county'] # 城市名稱
 
-            if country[:2] ==  self.city_name[:2]:
+            if country[:2] ==  self.city_name:#[:2]:
 
                 publishTime = log['publishtime'] #上傳時間
                 siteName = log['sitename'] #測站名稱
