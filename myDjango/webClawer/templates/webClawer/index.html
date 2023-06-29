@@ -1,11 +1,12 @@
 <form action = "" method = "Post">
     {% csrf_token %}
-    <input name= "city_name" placeholder="請輸入縣市名稱">
+    <!-- <input name= "city_name" placeholder="請輸入縣市名稱"> -->
     <input type= "submit" value="查詢">
 </form>
 
 <table class="table">
     <thead>
+        <tr>最新資料</tr>
         <tr>
             <th>上傳時間</th>
             <th>縣市</th>
